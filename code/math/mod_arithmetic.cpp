@@ -7,7 +7,7 @@ struct modBase {
     return (long long)val * o.val % mod;
   }
   modBase<mod> operator+(modBase<mod> o) {
-    return val + o.val > mod ? val + o.val - mod : val + o.val;
+    return val + o.val >= mod ? val + o.val - mod : val + o.val;
   }
 };
 
